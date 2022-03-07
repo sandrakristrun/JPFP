@@ -1,14 +1,9 @@
-/*
- * Hi! I'm your stylesheet! I've got some sensible defaults here,
- * but feel free to change me to your heart's content!
- */
-
 * {
   box-sizing: border-box;
-  font-family:'Gill Sans', 'Sans-serif';
+  font-family: "Gill Sans", "Sans-serif";
 }
 
-a{
+a {
   color: black;
   text-decoration: none;
 }
@@ -36,53 +31,55 @@ nav {
   justify-content: space-evenly;
   text-decoration: none;
 }
-nav::a{
-  color:white;
+nav::a {
+  color: white;
 }
 
 main {
   display: flex;
   padding: 40px;
-  justify-content: center
+  justify-content: center;
 }
-.campusesList, .single-campus, .single-student, .studentsList{
-  display:flex;
+.campusesList,
+.single-campus,
+.single-student,
+.studentsList {
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.left{
+.left {
   width: 50%;
   padding: 10px;
   margin: 10px;
   text-align: center;
 }
-.right{
+.right {
   width: 50%;
   text-align: center;
   padding: 10px;
   margin: 10px;
 }
 
-.student-in-school{
-  display:flex;
+.student-in-school {
+  display: flex;
   align-items: baseline;
 }
-.leftStudent{
+.leftStudent {
   padding: 0px 20px;
 }
 
-
-input[type=text] {
+input[type="text"] {
   padding: 8px;
-  margin:10px 20px;
+  margin: 10px 20px;
   border: 0;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: 50%;
 }
 
-button[type=submit] {
+button[type="submit"] {
   width: 20%;
   padding: 10px 10px;
   margin: 5px 0;
@@ -91,7 +88,7 @@ button[type=submit] {
   cursor: pointer;
 }
 
-#unregister-button{
+#unregister-button {
   width: 100%;
   padding: 10px 10px;
   margin: 5px 0;
@@ -103,28 +100,24 @@ button[type=submit] {
 select {
   width: 30%;
   margin: 20px, 20px;
-  padding:5px;
+  padding: 5px;
   border: none;
-  border-radius:10px;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
 }
 
-#addStudent, #addCampus{
+#addStudent,
+#addCampus {
   padding: 10px;
   text-align: center;
 }
 
 label {
-    display: inline-block;
-    width:100px;
-    text-align: right;
+  display: inline-block;
+  width: 100px;
+  text-align: right;
 }
 
-.homepage{
+.homepage {
   text-align: center;
 }
-
-
-
-
-
