@@ -3,59 +3,74 @@ import { connect } from "react-redux";
 import { addCampus } from "../redux/campuses";
 
 class AddCampus extends React.Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-      name: '',
-      address: '',
-      description: ''
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+      name: "",
+      address: "",
+      description: "",
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit(event){
+  handleSubmit(event) {
     event.preventDefault();
     this.props.addCampus(this.state);
     this.setState({
-      name: '',
-      address: '',
-      description: ''
-    })
+      name: "",
+      address: "",
+      description: "",
+    });
   }
 
-  handleChange(e){
+  handleChange(e) {
     this.setState({
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.value,
+    });
   }
 
   render() {
-    const {name, address, description} = this.state;
+    const { name, address, description } = this.state;
     return (
       <div>
-        <form id='campus-form' onSubmit={this.handleSubmit}>
+        <form id="campus-form" onSubmit={this.handleSubmit}>
           <div>
             <label>Campus Name:</label>
-            <input type='text' name='name' value={name} onChange={this.handleChange} />
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={this.handleChange}
+            />
           </div>
           <div>
             <label>Address:</label>
-            <input type='text' name='address' value={address} onChange={this.handleChange} />
+            <input
+              type="text"
+              name="address"
+              value={address}
+              onChange={this.handleChange}
+            />
           </div>
           <div>
             <label>Description:</label>
-            <input type='text' name='description' value={description} onChange={this.handleChange} />
+            <input
+              type="text"
+              name="description"
+              value={description}
+              onChange={this.handleChange}
+            />
           </div>
-        <button type='submit'>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addCampus: (campus) => dispatch(addCampus(campus))
+  addCampus: (campus) => dispatch(addCampus(campus)),
 });
 
-export default connect(null, mapDispatchToProps)(AddCampus)
+export default connect(null, mapDispatchToProps)(AddCampus);
